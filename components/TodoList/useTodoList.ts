@@ -6,7 +6,7 @@ const useTodoList = () => {
   const [dataList, setDataList] = useState<DataType[]>(dataRaw);
   const [fruits, setFruits] = useState<DataType[]>([]);
   const [vegetables, setVegetables] = useState<DataType[]>([]);
-  const timeoutRefs = useRef<Record<string, number>>({});
+  const timeoutRefs = useRef<Record<string, NodeJS.Timeout>>({});
 
   const onSelectData = (dataSelected: DataType) => {
     const timeoutId = setTimeout(() => {
